@@ -1,0 +1,40 @@
+Back at the dock, Bob unloads crates one by one and lines them up on the pier in rows of exactly n. When the boat runs out of crates in the middle of a row, he chalks the leftover slots as None so the row still counts n positions.
+
+Given the crates in the order they come off the boat and the row size n, return the pier as a list of rows. And if n is zero or negative, Bob refuses to work — return an empty list.
+
+def crate_rows(items: list, n: int) -> list[list]:
+
+The rules
+
+
+    Split the items into rows of exactly n, keeping their original order
+
+    If the last row is short, fill the missing slots with None
+
+    If n is 0 or negative, return an empty list
+
+    An empty item list returns an empty list
+
+    The input list must not be modified 
+
+Examples
+
+crate_rows([1, 2, 4, 5], 2)
+
+→ [[1, 2], [4, 5]]
+
+crate_rows(["seeds", "pots", "soil", "tools", "rope"], 3)
+
+→ [['seeds', 'pots', 'soil'], ['tools', 'rope', None]]
+
+the last row is padded with None
+
+crate_rows([1, 2, 3], 0)
+
+→ []
+
+no row size, no rows
+
+crate_rows([], 4)
+
+→ [] 

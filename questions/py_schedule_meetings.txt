@@ -1,0 +1,29 @@
+py_schedule_meetings
+
+Assignment
+Write a function that determines the minimum number of meeting rooms
+required to schedule a list of meeting time intervals without overlap,
+and assigns meetings to rooms.
+
+Each interval is represented as a tuple of (start_time, end_time).
+
+The function should:
+- Sort meetings by start time and assign them to available rooms
+  sequentially.
+- Return a tuple (num_rooms, rooms) where num_rooms is the integer
+  count of rooms required, and rooms is a list of lists containing the
+  scheduled intervals for each room.
+- If the input list is empty, return (0, []).
+
+Function signature
+def schedule_meetings(intervals: list[tuple[int, int]]) -> tuple[int, list]:
+
+Examples
+Input
+schedule_meetings([(0, 30), (5, 10), (15, 20)])
+Output
+(2, [[(0, 30)], [(5, 10), (15, 20)]])
+Input
+schedule_meetings([])
+Output
+(0, [])
