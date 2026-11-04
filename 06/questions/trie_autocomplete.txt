@@ -1,0 +1,47 @@
+Write a function that implements an autocomplete system using a Trie (prefix tree) data structure.
+The function should insert a list of words into the Trie and find all words that start with a given prefix.
+
+Allowed functions: None
+
+The function should:
+- Build a Trie from the list of words.
+- Return all unique words that start with the given prefix.
+- Return results in alphabetical (lexicographical) order.
+- Handle an empty prefix by returning all unique words sorted.
+- Return an empty list if no matches are found.
+- Be case-sensitive.
+- Ensure duplicate words in the input appear only once in the output.
+
+Function signature
+
+def trie_autocomplete(words: list[str], prefix: str) -> list[str]: 
+
+Examples
+Input
+trie_autocomplete(["apple", "app", "apricot", "banana"], "app")
+Output
+["app", "apple"]
+Input
+trie_autocomplete(["apple", "app", "apricot", "banana"], "ban")
+Output
+["banana"]
+Input
+trie_autocomplete(["hello", "world", "help", "heap"], "he")
+Output
+["heap", "hello", "help"]
+Input
+trie_autocomplete(["test"], "xyz")
+Output
+[]
+Input
+trie_autocomplete(["cat", "car", "card", "care"], "car")
+Output
+["car", "card", "care"]
+Input
+trie_autocomplete([], "test")
+Output
+[]
+Input
+trie_autocomplete(["a", "ab", "abc"], "")
+Output
+["a", "ab", "abc"]
